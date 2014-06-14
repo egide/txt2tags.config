@@ -31,7 +31,7 @@
 
 % Set a default target if none specified
 %   Useful if you always use the same target for all documents
-%%!target: html
+%!target: html
 
 % Set the default encoding for all documents
 %   Examples: iso-8859-1, UTF-8
@@ -91,4 +91,44 @@
 % LaTeX and TeX names appearing on their classical formats
 %%!postproc(tex):   LaTeX   \\LaTeX{}
 %%!postproc(tex):   \bTeX   \\TeX{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%% Vim
+% Transformations utiles pour un usage avec Vim
+
+%% Transformation des balises de titre
+%%
+%% Titres avec ancre
+%!Preproc	: "^{{{1\s*(.*)\s*\(\[[^]]*\]\)"	"=\1=\2"
+%!Preproc	: "^{{{2\s*(.*)\s*\(\[[^]]*\]\)"	"==\1==\2"
+%!Preproc	: "^{{{3\s*(.*)\s*\(\[[^]]*\]\)"	"===\1===\2"
+%!Preproc	: "^{{{4\s*(.*)\s*\(\[[^]]*\]\)"	"====\1====\2"
+%!Preproc	: "^{{{5\s*(.*)\s*\(\[[^]]*\]\)"	"=====\1=====\2"
+
+%% Titres normaux
+%!Preproc	: "^{{{1\s*(.*)"	"=\1="
+%!Preproc	: "^{{{2\s*(.*)"	"==\1=="
+%!Preproc	: "^{{{3\s*(.*)"	"===\1==="
+%!Preproc	: "^{{{4\s*(.*)"	"====\1===="
+%!Preproc	: "^{{{5\s*(.*)"	"=====\1====="
+
+
+%% Suppression des marques de pliages pour vim
+%!PreProc	: "\s*{{{[1-5]" ""
+%!PostProc	: "\s*{{{[1-5]" ""
+
+%% supression des marque pour une écriture indentée
+%!PreProc	: "^\t*"	""
+%% Mise en place des zones de citations
+%!Preproc	: "^> " "\t"
+
+%!options(xhtml)	: --css-sugar --css-inside
+%%!options(xhtml)	: --css-sugar
+%!Style(xhtml)		: modern.css
+
+%% Ajout de saut de ligne qui ne sont pas des saut de paragraphes
+%!PreProc(xhtml)	:	'\\\\' '£br£'
+%!PostProc(xhtml)	:	'£br£' '<br />'
+%!PreProc(tex)		:	'\\\\' '£br£'
 
