@@ -1,5 +1,5 @@
-%
-% txt2tags sample config file
+% txt2tags sample config file {{{1
+%% vim: set nospell fdm=marker:
 %
 % This is a sample for the .txt2tagsrc user config file.
 % Part of the txt2tags project (http://txt2tags.org).
@@ -92,31 +92,32 @@
 %%!postproc(tex):   LaTeX   \\LaTeX{}
 %%!postproc(tex):   \bTeX   \\TeX{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%%% Vim
+%%% Vim {{{1
 % Transformations utiles pour un usage avec Vim
 
-%% Transformation des balises de titre
+%% Transformation des balises de titre {{{2
 %%
-%% Titres avec ancre
-%!Preproc	: "^{{{1\s*(.*)\s*\(\[[^]]*\]\)"	"=\1=\2"
-%!Preproc	: "^{{{2\s*(.*)\s*\(\[[^]]*\]\)"	"==\1==\2"
-%!Preproc	: "^{{{3\s*(.*)\s*\(\[[^]]*\]\)"	"===\1===\2"
-%!Preproc	: "^{{{4\s*(.*)\s*\(\[[^]]*\]\)"	"====\1====\2"
-%!Preproc	: "^{{{5\s*(.*)\s*\(\[[^]]*\]\)"	"=====\1=====\2"
+%% Titres avec ancre {{{3
+%!Preproc			: "^{\{3\}1\s*(.*)\s*(\[[^]]*\])"	"=\1=\2"
+%!Preproc			: "^{\{3\}2\s*(.*)\s*(\[[^]]*\])"	"==\1==\2"
+%!Preproc			: "^{\{3\}3\s*(.*)\s*(\[[^]]*\])"	"===\1===\2"
+%!Preproc			: "^{\{3\}4\s*(.*)\s*(\[[^]]*\])"	"====\1====\2"
+%!Preproc			: "^{\{3\}5\s*(.*)\s*(\[[^]]*\])"	"=====\1=====\2"
 
-%% Titres normaux
-%!Preproc	: "^{{{1\s*(.*)"	"=\1="
-%!Preproc	: "^{{{2\s*(.*)"	"==\1=="
-%!Preproc	: "^{{{3\s*(.*)"	"===\1==="
-%!Preproc	: "^{{{4\s*(.*)"	"====\1===="
-%!Preproc	: "^{{{5\s*(.*)"	"=====\1====="
+%% Titres normaux {{{3
+%!Preproc			: "^{\{3\}1\s*(.*)"	"=\1="
+%!Preproc			: "^{\{3\}2\s*(.*)"	"==\1=="
+%!Preproc			: "^{\{3\}3\s*(.*)"	"===\1==="
+%!Preproc			: "^{\{3\}4\s*(.*)"	"====\1===="
+%!Preproc			: "^{\{3\}5\s*(.*)"	"=====\1====="
 
 
-%% Suppression des marques de pliages pour vim
-%!PreProc	: "\s*{{{[1-5]" ""
-%!PostProc	: "\s*{{{[1-5]" ""
+%% Suppression des marques de pliages pour vim {{{3
+%!PreProc			: "\s*{\{3\}[1-5]" ""
+%!PostProc			: "\s*{\{3\}[1-5]" ""
+
+%% supression des marque pour une écriture indentée {{{3
+%!PreProc			: "^\t*"	""
 
 %% supression des marque pour une écriture indentée
 %!PreProc	: "^\t*"	""
@@ -127,7 +128,7 @@
 %%!options(xhtml)	: --css-sugar
 %!Style(xhtml)		: modern.css
 
-%% Ajout de saut de ligne qui ne sont pas des saut de paragraphes
+%% Ajout de saut de ligne qui ne sont pas des saut de paragraphes {{{3
 %!PreProc(xhtml)	:	'\\\\' '£br£'
 %!PostProc(xhtml)	:	'£br£' '<br />'
 %!PreProc(tex)		:	'\\\\' '£br£'
