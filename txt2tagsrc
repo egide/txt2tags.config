@@ -137,3 +137,32 @@
 %!PostProc(xhtml)	:	'£br£' '<br />'
 %!PreProc(tex)		:	'\\\\' '£br£'
 
+%% Typographie {{{1
+%% Guillemets {{{2
+%!Preproc			:	'«\s*'	'«'
+%!PostProc(html)	:	'«'		'«&nbsp;'
+%!PostProc(xhtml)	:	'«'		'«&nbsp;'
+%!PostProc(tex)	:	'«'		'\\og'
+%!Preproc			:	'\s*»'	'»'
+%!PostProc(html)	:	'»'		'&nbsp;»'
+%!PostProc(xhtml)	:	'»'		'&nbsp;»'
+%!PostProc(tex)	:	'»'		'\\fg{}'
+
+%% Ponctuation haute {{{2
+%!PreProc			:	'\s+([;:!?])'	'~\1'
+%!PostProc(html)	:	'\s+([;:!?])'	'&nbsp;\1'
+%!PostProc(xhtml)	:	'\s+([;:!?])'	'&nbsp;\1'
+%!PostProc(tex)	:	'\s+([;:!?])'	'\1'
+
+%% Traits {{{2
+%!PreProc(html)		:	'--~'	'&mdash;&nbsp;'
+%!PreProc(xhtml)		:	'--~'	'&mdash;&nbsp;'
+%!PreProc(html)		:	'~--'	'&nbsp;&mdash;'
+%!PreProc(xhtml)		:	'~--'	'&nbsp;&mdash;'
+
+%% Points de suspension {{{2
+%!PreProc(html)		:	'\.\.\.'	'&hellip;'
+%!PreProc(xhtml)		:	'\.\.\.'	'&hellip;'
+%!PreProc(tex)			:	'\.\.\.'	'\\dots'
+
+
