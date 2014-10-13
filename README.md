@@ -23,6 +23,6 @@ Organisation
 Le clone de "production" du dépôt est placé dans ~/devel/txt2tags.config (vous
 pouvez en fait le mettre où vous voulez, perso je fais comme ça...).
 
-Le fichier txt2tagsrc à un lien symbolique ~/.txt2tags.rc
+Le fichier config/txt2tagsrc à un lien symbolique ~/.txt2tags.rc
 
 
