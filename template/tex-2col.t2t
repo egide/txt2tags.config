@@ -1,3 +1,4 @@
+%% vim: set nospell:
 %!target:tex
 %!encoding:utf8
 
@@ -30,15 +31,15 @@
 %!PostProc(tex): '^\\clearpage' ''
 %!PostProc(tex): '.*{inputenc}.*' ''
 
+%!PreProc(tex): '^%%TEX[\t\s]*(.*)[\t\s]*' "''\1''"
+
 %!style(tex): geometry
 %!PostProc(tex): '{geometry}' '[textwidth=17.5cm,textheight=25cm,left=2cm,top=2cm]{geometry}'
 
 %!style(tex): multicol
 %!PostProc(tex): {multicol} {multicol}\n\setlength\columnseprule{0.4pt}\setlength\multicolsep{1pt}
-%!PostProc(tex): '\\maketitle' '\\maketitle\n\\begin{multicols}{2}'
-%!PostProc(tex): '\\end{document}' '\end{multicols}\n\\end{document}'
-%!PostProc(tex): '^-BEGINCOLL-' '\\begin{multicols}{2}'
-%!PostProc(tex): '^-ENDCOLL-' '\end{multicols}'
+%!PreProc(tex): '^%%BEGINCOLL' "''\\begin{multicols}{2}''"
+%!PreProc(tex): '^%%ENDCOLL' "''\\end{multicols}''"
 
 %!style(tex): scrpage2
 %!PostProc(tex): '{scrpage2}' '{scrpage2}\n\\ihead[]{{\\small -IHEAD-}}\\chead[]{{\\small -CHEAD-}}\\ohead[]{{\\small \\number\\day/\\,\\number\\month/\\,\\number\\year}}'
@@ -48,10 +49,9 @@
 %%!PostProc(tex): 
 %%!PostProc(tex): 
 
-%!style(tex): 
-
 %!style(tex): lastpage
-
 %!style(tex): xltxtra
 %!style(tex): babel
 
+
+%!PostProc: .*DELETELIGNE.* ''
