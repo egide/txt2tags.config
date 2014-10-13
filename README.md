@@ -20,9 +20,25 @@ Liens
 
 Organisation
 ============
-Le clone de "production" du dépôt est placé dans ~/devel/txt2tags.config (vous
-pouvez en fait le mettre où vous voulez, perso je fais comme ça...).
+Dossiers
+--------
+### doc ###
+Documentations diverses:
+* propre au projet;
+* outils externes.
 
-Le fichier config/txt2tagsrc à un lien symbolique ~/.txt2tags.rc
+### template ###
+Modèles de documents, de présentations, à utiliser pour débuter des projets.
+
+### config ###
+Fichier de configuration de base et extensions pour des configurations
+spécifiques.
+
+
+Workflow
+--------
+Tout tourne autour de git flow :
+* https://github.com/nvie/gitflow
+* http://www.synbioz.com/blog/git-adopter-un-modele-de-versionnement-efficace
 
 
