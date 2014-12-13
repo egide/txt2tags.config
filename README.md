@@ -20,13 +20,14 @@ Liens
 
 Organisation
 ============
+* **version.md** Ce fichier contient un bref explicatif de la versions extraite:
+	* branche de base (éventuellement commit de départ);
+	* but de cet extraction;
+	* description.
+
+
 Dossiers
 --------
-### doc ###
-Documentations diverses:
-* propre au projet;
-* outils externes.
-
 ### template ###
 Modèles de documents, de présentations, à utiliser pour débuter des projets.
 
@@ -41,4 +42,7 @@ Tout tourne autour de git flow :
 * https://github.com/nvie/gitflow
 * http://www.synbioz.com/blog/git-adopter-un-modele-de-versionnement-efficace
 
+Avec cependant deux modifications:
+* La branche de production ce nome **stable** au lieu de *master*;
+* La branche de développement se nome **master** au lieu de *develop*.
 
