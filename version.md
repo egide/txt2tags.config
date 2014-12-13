@@ -2,15 +2,17 @@ Versions
 ========
 
 Nous sommes dans la branche:
-* master
+* stable
+* V.01.01
 
 
 Objectif
 --------
-Réorganiser le dépôt.
+---
 
 
 Description
 -----------
-Suppression des dossiers et branches inutiles.
+Version utilisée sur ma machine.
+
 
