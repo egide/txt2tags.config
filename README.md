@@ -41,4 +41,7 @@ Tout tourne autour de git flow :
 * https://github.com/nvie/gitflow
 * http://www.synbioz.com/blog/git-adopter-un-modele-de-versionnement-efficace
 
+Avec cependant deux modifications:
+* La branche de production ce nome **stable** au lieu de *master*;
+* La branche de développement se nome **master** au lieu de *develop*.
 
