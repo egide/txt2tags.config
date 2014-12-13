@@ -20,13 +20,14 @@ Liens
 
 Organisation
 ============
+* **version.md** Ce fichier contient un bref explicatif de la versions extraite:
+	* branche de base (éventuellement commit de départ);
+	* but de cet extraction;
+	* description.
+
+
 Dossiers
 --------
-### doc ###
-Documentations diverses:
-* propre au projet;
-* outils externes.
-
 ### template ###
 Modèles de documents, de présentations, à utiliser pour débuter des projets.
 
