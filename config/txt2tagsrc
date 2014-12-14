@@ -126,11 +126,12 @@
 %!Preproc			:	"^>> " "\t\t"
 %!Preproc			:	"^> " "\t"
 
+%%% Mise en page [[[1
+%% CSS [[2
 %!options(xhtml)	: --css-sugar --css-inside
-%%!options(xhtml)	: --css-sugar
 %!Style(xhtml)		: modern.css
 
-%% Ajout de saut de ligne qui ne sont pas des saut de paragraphes [[[3
+%% Ajout de saut de ligne qui ne sont pas des saut de paragraphes [[[2
 %!PreProc(xhtml)	:	'\\\\' '£br£'
 %!PostProc(xhtml)	:	'£br£' '<br />'
 %!PreProc(tex)		:	'\\\\' '£br£'
